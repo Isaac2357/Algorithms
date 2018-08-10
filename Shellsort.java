@@ -57,27 +57,6 @@ public class Shellsort {
 		}
 		return deltas;
 	}
-	public static int[] obtainDeltas2(int n) {
-		int delta = 1;
-		int[] deltas = null;
-		int count = 0;
-		if (n == 1) {
-			deltas = new int[1];
-			deltas[0] = 1;
-			return deltas;
-		}
-		while (delta < n) {
-			delta = (3 * delta) + 1;
-			count++;
-		}
-		deltas = new int[count];
-		delta = 1;
-		for (int i = 0; i < deltas.length; i++) {
-			deltas[i] = delta;
-			delta = (3 * delta) + 1;
-		}
-		return deltas;
-	}
 
 	public static boolean greaterThan(int a, int b) {
 		return a > b;
